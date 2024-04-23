@@ -8,12 +8,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Browser {
 
-    private static WebDriver driver;          //singlton
+    private static WebDriver driver;          //singleton
 
-    private Browser() {                       //singlton
+    private Browser() {                       //singleton
     }
 
-    public static WebDriver getDriver() {     //singlton
+    public static WebDriver getDriver() {     //singleton
         if (driver == null) {
             WebDriverManager.chromedriver().setup(); //automatic driver download
             driver = new ChromeDriver();
