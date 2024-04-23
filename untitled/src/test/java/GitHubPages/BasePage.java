@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 public class BasePage {
 
-    public WebDriver driver;                    //singleton
+    public static WebDriver driver;                    //singleton
 
-    public BasePage() {                         //singleton
+    public BasePage() {                                //singleton
         driver = Browser.getDriver();
     }
 }
