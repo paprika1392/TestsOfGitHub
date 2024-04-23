@@ -2,7 +2,7 @@ package GitHubPages;
 
 import org.openqa.selenium.By;
 
-public class HomePage extends BasePage {
+public class StartPage extends BasePage {
 
     private final By signInButton = By.xpath("//div[@class='flex-1']/a[@href='/login']");
 
