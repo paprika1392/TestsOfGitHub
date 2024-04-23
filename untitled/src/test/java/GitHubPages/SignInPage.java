@@ -1,6 +1,8 @@
 package GitHubPages;
 
+import Utils.Browser;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SignInPage extends BasePage {
 
@@ -9,6 +11,7 @@ public class SignInPage extends BasePage {
     private static By signInWithYourCreeds = By.xpath("//input[@value='Sign in']");
 
     public void enterLogin(String login) {
+        Browser.getWebdriverWait().until(ExpectedConditions.visibilityOfElementLocated(loginField));
         driver.findElement(loginField).click();
         driver.findElement(loginField).sendKeys(login);
     }
