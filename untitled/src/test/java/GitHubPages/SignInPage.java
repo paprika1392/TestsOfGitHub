@@ -10,13 +10,13 @@ public class SignInPage extends BasePage {
     private static By passwordField = By.xpath("//input[@id='password']");
     private static By signInWithYourCreeds = By.xpath("//input[@value='Sign in']");
 
-    public void enterLogin(String login) {
+    public void enterUserLogin(String login) {
         Browser.getWebdriverWait().until(ExpectedConditions.visibilityOfElementLocated(loginField));
         driver.findElement(loginField).click();
         driver.findElement(loginField).sendKeys(login);
     }
 
-    public void enterPassword(String password) {
+    public void enterUserPassword(String password) {
         driver.findElement(passwordField).click();
         driver.findElement(passwordField).sendKeys(password);
     }

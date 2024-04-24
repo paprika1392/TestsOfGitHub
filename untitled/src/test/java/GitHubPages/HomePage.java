@@ -14,7 +14,6 @@ public class HomePage extends BasePage {
 
     public void waitUntilHomePageIsLoaded() {
         Browser.getWebdriverWait().until(ExpectedConditions.visibilityOfElementLocated(homeTitle));
-
     }
 
     public void checkAccIsVisible() {
@@ -24,7 +23,7 @@ public class HomePage extends BasePage {
         Assert.assertTrue(result, "User's account menu is not available");
     }
 
-    public void checkCorrectLogIn(String login) {
+    public void checkCorrectLoadedAcc(String login) {
         driver.findElement(userAccountMenu).click();
         String user = driver.findElement(userName).getText();
         boolean result = user.contains(login);
