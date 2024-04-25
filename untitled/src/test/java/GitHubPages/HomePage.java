@@ -26,9 +26,10 @@ public class HomePage extends BasePage {
     public void checkCorrectLoadedAcc(String login) {
         driver.findElement(userAccountMenu).click();
         String user = driver.findElement(userName).getText();
-        boolean result = user.contains(login);
+        System.out.println("Expected acc name is: " + login);
+        System.out.println("Actual acc name is: " + user);
 
-        Assert.assertEquals(result, String.format("This login is not correct: '%s'", login));
+        Assert.assertEquals(user.trim(), login, "Acc name is not correct");
 
     }
 }
