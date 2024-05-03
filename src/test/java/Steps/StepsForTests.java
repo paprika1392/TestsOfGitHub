@@ -46,11 +46,11 @@ public class StepsForTests {
 
     public static void waitPageIsLoadedAndCheckAccIsVisible() {
         homePage.waitUntilHomePageIsLoaded();
-        homePage.checkAccIsVisible();
+        homePage.checkAccountIsVisible();
     }
 
     public static void checkCorrectLoadedAccount(String login) {
-        homePage.checkCorrectLoadedAcc(login);
+        homePage.checkCorrectLoadedAccount(login);
     }
 
 }
