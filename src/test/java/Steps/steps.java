@@ -35,12 +35,9 @@ public class steps {
         startPage.clickSignInButton();
     }
 
-    public static void enterPersonalDates(String login, String password) {
+    public static void logIn(String login, String password) {
         signInPage.enterUserLogin(login);
         signInPage.enterUserPassword(password);
-    }
-
-    public static void enterToPersonalAcc() {
         signInPage.logInToAccount();
     }
 
