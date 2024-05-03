@@ -7,7 +7,7 @@ import Utils.Browser;
 
 import static Utils.Constants.GITHUB_HOME_PAGE_URL;
 
-public class StepsForTests {
+public class steps {
 
     public static StartPage startPage = new StartPage();
     public static SignInPage signInPage = new SignInPage();
