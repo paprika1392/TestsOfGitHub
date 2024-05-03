@@ -6,7 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class StartPage extends BasePage {
 
-    private final By signInButton = By.xpath("//div[contains(@class,'mr-lg-3')]//a[@href='/login']");
+    private final By signInButton = By.xpath("//a[contains(@class,'HeaderMenu-link') and @href='/login']");
 
     public void clickToSignInButton() {
         Browser.getWebdriverWait().until(ExpectedConditions.elementToBeClickable(signInButton));
