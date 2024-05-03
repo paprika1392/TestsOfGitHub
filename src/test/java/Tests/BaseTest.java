@@ -8,7 +8,7 @@ public class BaseTest {
 
     @BeforeTest
     public static void startWorkDriver() {
-        steps.startWorkOfBrowser();
+        steps.startBrowserWork();
         steps.clearCookies();
     }
 

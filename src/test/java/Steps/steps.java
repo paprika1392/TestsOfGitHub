@@ -15,7 +15,7 @@ public class steps {
 
     //                      """  Common actions for open browser  """
 
-    public static void startWorkOfBrowser() {
+    public static void startBrowserWork() {
         Browser.webDriverStartWork();
         Browser.setUrl(GITHUB_HOME_PAGE_URL);
         Browser.customizeBrowserWindow();
