@@ -23,8 +23,11 @@ public class HomePage extends BasePage {
         Assert.assertTrue(result, "User's account menu is not available");
     }
 
-    public void checkCorrectLoadedAccount(String login) {
+    public void clickUserAccountMenu() {
         driver.findElement(userAccountMenu).click();
+    }
+
+        public void checkCorrectLoadedAccount(String login) {
         String user = driver.findElement(userName).getText();
 
         Assert.assertEquals(user.trim(), login, "Acc name is not correct");

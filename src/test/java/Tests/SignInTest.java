@@ -12,8 +12,8 @@ public class SignInTest extends BaseTest {
     public static void testForLogIn() {
         steps.clickToSignIn();
         steps.logIn(LOGIN, PASSWORD);
-        steps.enterToPersonalAcc();
-        steps.waitPageIsLoadedAndCheckAccIsVisible();
-        steps.checkCorrectLoadedAccount(LOGIN);
+        steps.waitPageIsLoaded();
+        steps.checkAccount();
+        steps.checkAccountNameIsCorrect(LOGIN);
     }
 }

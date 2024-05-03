@@ -41,12 +41,15 @@ public class steps {
         signInPage.logInToAccount();
     }
 
-    public static void waitPageIsLoadedAndCheckAccIsVisible() {
+    public static void waitPageIsLoaded() {
         homePage.waitUntilHomePageIsLoaded();
+    }
+    public static void checkAccount() {
         homePage.checkAccountIsVisible();
     }
 
-    public static void checkCorrectLoadedAccount(String login) {
+    public static void checkAccountNameIsCorrect(String login) {
+        homePage.clickUserAccountMenu();
         homePage.checkCorrectLoadedAccount(login);
     }
 
