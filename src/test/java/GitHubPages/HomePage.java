@@ -8,7 +8,7 @@ import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
-    private static By homeTitle = By.xpath("//h2[@data-target='feed-container.feedTitle']");
+    private static By homeTitle = By.xpath("//h2[text()='Home']");
     private static By userAccountMenu = By.xpath("//button[@aria-label='Open user account menu']");
     private static By userName = By.xpath("//div[@class='Overlay-headerContentWrap']//span[@class='Truncate-text']");
 
