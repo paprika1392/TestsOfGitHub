@@ -4,6 +4,7 @@ import GitHubPages.HomePage;
 import GitHubPages.SignInPage;
 import GitHubPages.StartPage;
 import Utils.Browser;
+import org.testng.Assert;
 
 import static Utils.Constants.GITHUB_HOME_PAGE_URL;
 
@@ -50,7 +51,7 @@ public class steps {
 
     public static void checkAccountNameIsCorrect(String login) {
         homePage.clickUserAccountMenu();
-        homePage.checkCorrectLoadedAccount(login);
+        Assert.assertEquals(homePage.checkCorrectLoadedAccount(), login, "Acc name is not correct");
     }
 
 }
