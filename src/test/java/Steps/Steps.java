@@ -8,7 +8,7 @@ import org.testng.Assert;
 
 import static Utils.Constants.GITHUB_HOME_PAGE_URL;
 
-public class steps {
+public class Steps {
 
     public static StartPage startPage = new StartPage();
     public static SignInPage signInPage = new SignInPage();

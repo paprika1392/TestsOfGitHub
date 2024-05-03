@@ -1,6 +1,6 @@
 package Tests;
 
-import Steps.steps;
+import Steps.Steps;
 import org.testng.annotations.Test;
 
 import static Utils.Constants.LOGIN;
@@ -10,10 +10,10 @@ public class SignInTest extends BaseTest {
 
     @Test
     public static void testForLogIn() {
-        steps.clickToSignIn();
-        steps.logIn(LOGIN, PASSWORD);
-        steps.waitPageIsLoaded();
-        steps.checkAccount();
-        steps.checkAccountNameIsCorrect(LOGIN);
+        Steps.clickToSignIn();
+        Steps.logIn(LOGIN, PASSWORD);
+        Steps.waitPageIsLoaded();
+        Steps.checkAccount();
+        Steps.checkAccountNameIsCorrect(LOGIN);
     }
 }
