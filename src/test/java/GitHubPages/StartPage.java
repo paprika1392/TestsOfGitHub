@@ -8,7 +8,7 @@ public class StartPage extends BasePage {
 
     private final By signInButton = By.xpath("//a[contains(@class,'HeaderMenu-link') and @href='/login']");
 
-    public void clickToSignInButton() {
+    public void clickSignInButton() {
         Browser.getWebdriverWait().until(ExpectedConditions.elementToBeClickable(signInButton));
         driver.findElement(signInButton).click();
     }

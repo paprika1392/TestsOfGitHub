@@ -32,7 +32,7 @@ public class StepsForTests {
     //                    """ Steps for Sign in gitHub test """
 
     public static void clickToSignIn() {
-        startPage.clickToSignInButton();
+        startPage.clickSignInButton();
     }
 
     public static void enterPersonalDates(String login, String password) {
