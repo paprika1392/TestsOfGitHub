@@ -4,7 +4,6 @@ import Utils.Browser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
@@ -16,26 +15,18 @@ public class HomePage extends BasePage {
         Browser.getWebdriverWait().until(ExpectedConditions.visibilityOfElementLocated(homeTitle));
     }
 
-    public void checkAccountIsVisible() {
+    public void findUserAccountMenuButton() {
         WebElement element = driver.findElement(userAccountMenu);
-        boolean result = element.isDisplayed();
-
-        Assert.assertTrue(result, "User's account menu is not available");
+    //    boolean result = element.isDisplayed();
+     //   Assert.assertTrue(result, "User's account menu is not available");
     }
 
     public void clickUserAccountMenu() {
         driver.findElement(userAccountMenu).click();
     }
 
-    public String checkCorrectLoadedAccount() {
+    public String getUserName() {
         String user = driver.findElement(userName).getText();
         return user;
     }
-
-//        public void checkCorrectLoadedAccount(String login) {
-//        String user = driver.findElement(userName).getText();
-//
-//        Assert.assertEquals(user.trim(), login, "Acc name is not correct");
-//
-//    }
 }

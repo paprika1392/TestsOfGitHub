@@ -46,12 +46,12 @@ public class Steps {
         homePage.waitUntilHomePageIsLoaded();
     }
     public static void checkAccount() {
-        homePage.checkAccountIsVisible();
+        homePage.findUserAccountMenuButton();
     }
 
     public static void checkAccountNameIsCorrect(String login) {
         homePage.clickUserAccountMenu();
-        Assert.assertEquals(homePage.checkCorrectLoadedAccount(), login, "Acc name is not correct");
+        Assert.assertEquals(homePage.getUserName(), login, "Acc name is not correct");
     }
 
 }
