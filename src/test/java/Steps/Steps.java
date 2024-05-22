@@ -32,7 +32,7 @@ public class Steps {
 
     //                    """ Steps for Sign in gitHub test """
 
-    public static void clickToSignIn() {
+    public static void clickSignInButton() {
         startPage.clickSignInButton();
     }
 
@@ -42,11 +42,11 @@ public class Steps {
         signInPage.logInToAccount();
     }
 
-    public static void waitPageIsLoaded() {
+    public static void waitUntilHomePageIsLoaded() {
         homePage.waitUntilHomePageIsLoaded();
     }
-    public static void checkAccount() {
-        homePage.findUserAccountMenuButton();
+    public static void checkAccountIsAvailable() {
+        Assert.assertTrue(homePage.findUserAccountMenuButton(), "User's account menu is not available");
     }
 
     public static void checkAccountNameIsCorrect(String login) {

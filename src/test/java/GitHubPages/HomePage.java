@@ -15,10 +15,10 @@ public class HomePage extends BasePage {
         Browser.getWebdriverWait().until(ExpectedConditions.visibilityOfElementLocated(homeTitle));
     }
 
-    public void findUserAccountMenuButton() {
+    public Boolean findUserAccountMenuButton() {
         WebElement element = driver.findElement(userAccountMenu);
-    //    boolean result = element.isDisplayed();
-     //   Assert.assertTrue(result, "User's account menu is not available");
+        boolean result = element.isDisplayed();
+        return result;
     }
 
     public void clickUserAccountMenu() {

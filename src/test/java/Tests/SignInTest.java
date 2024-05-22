@@ -10,10 +10,10 @@ public class SignInTest extends BaseTest {
 
     @Test
     public static void testForLogIn() {
-        Steps.clickToSignIn();
+        Steps.clickSignInButton();
         Steps.logIn(LOGIN, PASSWORD);
-        Steps.waitPageIsLoaded();
-        Steps.checkAccount();
+        Steps.waitUntilHomePageIsLoaded();
+        Steps.checkAccountIsAvailable();
         Steps.checkAccountNameIsCorrect(LOGIN);
     }
 }
